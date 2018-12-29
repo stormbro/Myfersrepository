@@ -1,0 +1,74 @@
+строка импорта , случайный, urllib, os, поток, массив, sys
+
+
+если  len (sys.argv) <  2 :
+    sys.exit ( " \ 033 [37mUsage: python "  + sys.argv [ 0 ] +  " (Количество потоков) " )
+threadAmount =  int (sys.argv [ 1 ])
+
+
+temp =  0
+# при температуре <10:
+
+noneWorking = [ 0 , 503 , 4939 , 4940 , 4941 , 12003 , 5556 ]
+
+def  scrapePictures ():
+	пока  верно :
+	# 	N = int (''. Join (random.choice ('1' + '2') для _ в диапазоне (1)))
+		amount =  int ( ' ' .join (random.choice ( ' 5 '  +  ' 6 ' ) для _ в  диапазоне ( 1 )))
+		если сумма ==  6 :
+	# 		N = int (''. Join (random.choice ('3') для _ в диапазоне (1)))
+			N =  3
+			# name = str (len ([имя для имени в os.listdir ('.'), если os.path.isfile (name)]) - 1)
+			picture =  str ( ' ' .join (random.choice (string.ascii_uppercase + string.digits + string.lowercase) для _ в  диапазоне (N)))
+			picture2 =  str ( ' ' .join (random.choice (string.digits + string.lowercase) для _ в  диапазоне (N)))
+			# printsc = "http://img.prntscr.com/img?url=http://i.imgur.com/" + "" + str (изображение) + str (изображение2) + ".jpg"
+				# Пытаюсь улучшить.
+			имя = картинка + картинка2
+			printsc =  " http://i.imgur.com/ "  +  " "  +  str (картинка) +  str (картинка2) +  " .jpg "
+			urllib.urlretrieve ( " " + printsc, str (имя) +  " .jpg " )
+			file  = os.path.getsize ( str (name) +  " .jpg " )
+			# print printsc
+				# оригинальный файл для печати. В настоящее время в режиме обслуживания.
+			# print str (file) + "file"
+			если  файл  в noneWorking:
+				print  " [-] Invalid: "  + picture + picture2
+				os.remove (имя +  " .jpg " )
+			еще :
+				print  " [+] Valid: "  + printsc
+			# temp + = 1
+		если сумма ==  5 :
+			N =  5
+	# 		N = int (''. Join (random.choice ('3') для _ в диапазоне (1)))
+	# 		N2 = int (''. Join (random.choice ('2') для _ в диапазоне (1)))
+			# name = str (len ([имя для имени в os.listdir ('.'), если os.path.isfile (name)]) - 1)
+			picture =  str ( ' ' .join (random.choice (string.ascii_uppercase + string.digits + string.lowercase) для _ в  диапазоне (N)))
+	# 		picture2 = str (''. join (random.choice (string.digits + string.lowercase) для _ в диапазоне (N2)))
+			# printsc = "http://img.prntscr.com/img?url=http://i.imgur.com/" + "" + str (picture) + ".jpg"
+				# Пытаюсь улучшить.
+			printsc =  " http://i.imgur.com/ "  +  " "  +  str (картинка) +  " .jpg "
+	# 		printsc = "http://img.prntscr.com/img?url=http://i.imgur.com/" + "" + str (картинка) + str (picture2) + ".jpg" #Porsiacaso necesito dividr 3 смешанный и luego 2 цифры и минускулы
+			имя = картинка
+			urllib.urlretrieve ( " " + printsc, str (имя) +  " .jpg " )
+			file  = os.path.getsize ( str (name) +  " .jpg " )
+			# print printsc
+			# print str (file) + "file"
+			если  файл  в noneWorking:
+				print  " [-] Invalid: "  + изображение
+				os.remove (имя +  " .jpg " )
+			еще :
+				print  " [+] Valid: "  + printsc
+			# temp + = 1
+
+tempVar2 =  1
+# threadAmount = sys.argv [2]
+while (tempVar2 <= threadAmount):
+	попробуй :
+		print ( « Начальная нить № »  +  str (tempVar2))
+		thread.start_new_thread (scrapePictures, ())
+		tempVar2 + =  1
+	кроме :
+		выведите  « Ошибка инициализации потока .... »
+
+# Сделать потоки никогда не останавливаться
+пока ( правда ):
+	temp =  1 + 1 
